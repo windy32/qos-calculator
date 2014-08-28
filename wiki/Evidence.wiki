@@ -67,3 +67,14 @@
 || [http://help.fonality.com/index.php?title=TroubleshootingFAQ/Connect/Setup/What_is_QoS_and_how_do_I_use_it%3F What is QoS and how do I use it?] || help.fonality.com || below 80% || below 80% || - ||
 || [http://www.increasebroadbandspeed.co.uk/draytek-2920 DrayTek 2920 load balancing router] || www.increasebroadbandspeed.co.uk || 80% || 80% || - ||
 || [http://lartc.org/howto/lartc.cookbook.ultimate-tc.html The Ultimate Traffic Conditioner: Low Latency, Fast Up & Downloads] || lartc.org || 90% || 80% || 10 KB ||
+
+=== Blogs ===
+
+|| *Title* || *Website* || *Shaping* || *Policing* || *Buffer Size* ||
+|| [http://www.howtogeek.com/75660/the-beginners-guide-to-qos-on-your-router/ The Beginner’s Guide to Using QoS (Quality of Service) on Your Router] || www.howtogeek.com || 85% - 95% || 85% - 95% || ||
+|| [http://lifehacker.com/326543/ensure-a-fast-internet-connection-when-you-need-it Ensure a Fast Internet Connection When You Need It] || lifehacker.com || 85% - 85% || sfq(128p) ||
+|| [http://dailybeagle.com/2009/09/the-basics-configure-quality-of-service-qos-for-voip/ The Basics: Configure Quality of Service (QoS) for VoIP] || dailybeagle.com || 90% - 95% || 80% - 90% || max(49ms, 6.25 KB) ||
+|| [http://chillingsilence.wordpress.com/2009/11/21/quick-and-easy-qos-with-tomato/ Quick and Easy QoS with Tomato] || chillingsilence.wordpress.com || 94% || 90% || max(49ms, 6.25 KB) ||
+|| [http://www.howtogeek.com/70659/how-to-give-your-computers-network-traffic-priority-with-dd-wrt/ How to Prioritize Your Network Traffic with DD-WRT] || www.howtogeek.com || 80% - 95% || 80% - 100% || sfq(128p) ||
+|| [https://calomel.org/pf_hfsc.html Hierarchical Fair Service Curve (HFSC)] || calomel.org || 97% || - || 500p ||
+|| [http://rtn66u.blogspot.jp/2013/02/traffic-manager-qos.html Traffic Manager - QOS] || rtn66u.blogspot.jp || 70% - 80% || 70% - 80% || - ||
