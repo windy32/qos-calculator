@@ -15,3 +15,5 @@
 
 || *Title* || *Website* || *Shaping* || *Policing* || *Buffer Size* || *In Reply* ||
 || [http://www.dd-wrt.com/phpBB2/viewtopic.php?t=3100 My "custom" QoS that really works] || www.dd-wrt.com || 85% || 85% || 200p, 700p, 1000p || ||
+|| [http://www.dd-wrt.com/phpBB2/viewtopic.php?p=905429 R7000 & QoS - recommended settings for games/media strea] || www.dd-wrt.com || 80% - 95% || 80% - 95% || fq_codel(10240p) || ||
+|| [http://www.dd-wrt.com/phpBB2/viewtopic.php?p=174421 Vonage and QoS finally figured out!!] || 80% || 90% || sfq(128p) || ||
