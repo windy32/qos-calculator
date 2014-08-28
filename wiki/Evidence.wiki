@@ -60,3 +60,10 @@
 || [http://www.voipmechanic.com/setting-qos-voip-linksys.htm Configure QoS for VoIP on your router for better voice quality] || www.voipmachanic.com || 90% || - || - ||
 || [http://vonage.nmhoy.net/qos.html Implementing QoS] || vonage.nmhoy.net || 90% - 95 || - || - ||
 || [http://www.wi-fiplanet.com/tutorials/article.php/3800416 How to: Manage Traffic Using Tomato and QoS] || www.wi-fiplanet.com || 90% || - || max(49ms, 6.25 KB) ||
+|| [http://www.voipmechanic.com/ddwrt-tomato.htm Tomato QoS settings on your VoIP router] || www.voipmechanic.com || 80% - 90% || - || - ||
+|| [http://help.close.io/customer/portal/articles/1286697-qos-settings QoS Setup] || help.close.io || 80% || 80% || - ||
+|| [http://wiki.mikrotik.com/wiki/NetworkPro_on_Quality_of_Service NetworkPro on Quality of Service] || wiki.mikrotik.com || above 85% || above 85% || - ||
+|| [https://www2.lancom.de/kb.nsf/1276/07F4E77B74CECC98C12578A2004077D2 Setting up a maximum bandwidth (firewall/QoS) in a LANCOM router] || www2.lancom.de || 80% || 80% || - ||
+|| [http://help.fonality.com/index.php?title=TroubleshootingFAQ/Connect/Setup/What_is_QoS_and_how_do_I_use_it%3F What is QoS and how do I use it?] || help.fonality.com || below 80% || below 80% || - ||
+|| [http://www.increasebroadbandspeed.co.uk/draytek-2920 DrayTek 2920 load balancing router] || www.increasebroadbandspeed.co.uk || 80% || 80% || - ||
+|| [http://lartc.org/howto/lartc.cookbook.ultimate-tc.html The Ultimate Traffic Conditioner: Low Latency, Fast Up & Downloads] || lartc.org || 90% || 80% || 10 KB ||
