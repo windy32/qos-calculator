@@ -43,3 +43,10 @@
 || [http://www.vonage-forum.com/Here_are_the_QoS_settings_I_use_on_my_Actiontec_with_VZ_FiOS_Go_to_the_QoS_tab_Select-post-98631.html Here are the QoS settings I use on my Actiontec with VZ FiOS. Go to the QoS tab. Select] || www.vonage-forum.com || 80% || 80% || - || ||
 || [http://serverfault.com/questions/105014/does-anyone-really-understand-how-hfsc-scheduling-in-linux-bsd-works Does anyone really understand how HFSC scheduling in Linux/BSD works?] || serverfault.com || 70% - 80% || 70% - 80% || - || Yes ||
 || [http://pbxinaflash.com/community/index.php?threads/best-way-to-go-about-qos-router-settings.8732/ Best way to go about QOS router settings?] || pbxinaflash.com || 80% - 90% || 80% - 90% || - || Yes ||
+|| [http://forums.plugpbx.org/index.php?topic=251.0;wap2 Correct Tomato QOS Settings] || forums.plugpbx.org || below 85% || below 85% || max(49ms, 6.25 KB) || Yes ||
+|| [http://forums.untangle.com/networking/6106-qos-voip-working.html QOS and VOIP - working?] || forums.untangle.com || 95% || 80% || - || Yes ||
+|| [http://www.spinics.net/lists/lartc/msg20832.html Re: Help needed with HTB] || www.spinics.net || 80% || - || - || ||
+|| [http://www.spinics.net/lists/lartc/msg21740.html RE: Prioritizing VOIP traffic without sacrificing throughput] || www.spinics.net || 80% || 80% || - || || 
+|| [http://www.spinics.net/lists/lartc/msg13594.html HTB mpu and overhead settings for PPPoE ADSL?] || www.spinics.net || 80% || - || - || ||
+|| [http://mailman.ds9a.nl/pipermail/lartc/2004q4/014257.html SEPARATING VOIP AND SURFING] || mailman.ds9a.nl || 80% || - || - || ||
+|| [https://forum.openwrt.org/viewtopic.php?id=4112 A qos script that really works!] || forum.openwrt.org || 93% || 89% || 1s || ||
