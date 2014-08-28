@@ -52,7 +52,7 @@ The QoS page in Tamato is presented above. There're much more features than most
   * Prioritization for special packets (for example, ACK, SYN)
   * TCP Vegas
 
-As a result, Tomato became my working system for the longest period of time, which works although not perfectly. The most important parameter of the QoS system, max bandwidth, is selected according to the well known 80 / 90 percent principle, which will be discussed later.
+As a result, Tomato became my working system for the longest period of time, which works although not perfectly. The most important parameter of the QoS system, max bandwidth, is selected according to the well known 80 / 90 percent principle, which is discussed in another wiki page.
 
 Most users just configure QoS through the Web interface, thus rich features in the web interface has become significantly important for most users. However still there're a few users who decided to dig into the system for even better flexibility and performance. Most the work are based on Shell scripts. On the [http://bbs.dualwan.cn/ Tomato DualWAN Mod forum] (Chinese), there're plenty of scripts shared by different users.
 
