@@ -3,7 +3,7 @@
 === Background Information ===
 
 <font color="#0068b7">
-*This wiki page describes the motivation for creating the project, as well as its precursor, the algts project. It may be strange that I created the algts testbed when there are a lot of free traffic generation systems available on the Internet. The reasons are explained here.*
+*This wiki page describes the motivation for creating the project, as well as its precursor, the algts project. It may seem to be strange that I created the algts testbed when there are a lot of free traffic generation systems available on the Internet. The reasons are explained here.*
 </font>
 
 It all begins when I was an undergraduate at Nanjing University of Aeronautics and Astronautics. At that time my roommates and me decided to purchase the Internet service based on ADSL with a downstream rate of 2 Mbps and an upstream rate of 256 Kbps at a cost of 180 RMB (about 26.5 USD) per month. The link rate is rather low, however at that time it was the only acceptable choice.
