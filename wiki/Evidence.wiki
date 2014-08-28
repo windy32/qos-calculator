@@ -37,3 +37,6 @@
 || [http://www.rage3d.com/board/showthread.php?t=33873855 QoS work for any of you?] || www.rage3d.com || 80% || - || - || ||
 || [http://forums.overclockers.com.au/showthread.php?t=441200 Engin VOIP + Billion 7402 + Help me setup QoS so my calls arn't choppy.] || forums.overclockers.com.au || 80% || 80% || - || Yes ||
 || [http://forums.na.leagueoflegends.com/board/showthread.php?t=97116 Slight lag when running QoS/ Tomato/DD-WRT!] || forums.na.leagueoflegends.com || 80% || 80% || - || Yes ||
+|| [http://tomato.groov.pl/?page_id=334&bugerator_nav=display&bug_project=1&issue=256 QOS Speed Limits] || tomato.groov.pl || 80% || 80% || max(49ms, 6.25 KB) || Yes ||
+|| [http://forums.stevehoffman.tv/threads/sharing-an-internet-connection-evenly-via-a-linksys-router.203605/ Sharing an Internet Connection Evenly Via a Linksys Router] || forums.stevehoffman.tv || 80% || - || - || Yes ||
+|| [http://hardforum.com/showthread.php?t=1454426 Should I use QoS on my home router? Is it worth it?] || hardforum.com || 80% - 90% || 80% - 90% || max(49ms, 6.25 KB) || ||
