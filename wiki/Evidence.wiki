@@ -30,3 +30,6 @@
 || [http://www.actuarialoutpost.com/actuarial_discussion_forum/archive/index.php/t-241559.html Voip and QOS] || www.actuarialoutpost.com || 80% - 90% || 80% - 90% || - || Yes ||
 || [http://forums.dlink.com/index.php?action=printpage;topic=46039.0 Properly setup QOS engine] || forums.dlink.com || 80% || - || - || ||
 || [http://www.ulop.net/forum/4-lounge/558495-qos-settings-for-wireless-router-adp-wizard-intex qos settings for Wireless Router/Adp WIZARD INTEX] || www.ulop.net || 80% || 80% || - || Yes ||
+|| [http://www.myopenrouter.com/forum/thread/31357/QoS-is-not-functioning-correctly./ QoS is not functioning correctly.] || www.myopenrouter.com || - || 80% || - || ||
+|| [http://www.phoneservicesupport.com/mj-actiontec-router-qos-t12036.html MJ & Actiontec Router QOS ] || www.phoneservicesupport.com || 80% || 80% || - || Yes ||
+|| [http://community.linksys.com/t5/Wireless-Routers/Request-suggestion-to-improve-WISP-Ooma-VOIP-call-quality-using/td-p/534448 Request suggestion to improve WISP Ooma VOIP call quality using a Linksys WRT54G v5?] || community.linksys.com || 80% || - || - || ||
