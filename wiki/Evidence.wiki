@@ -78,3 +78,16 @@
 || [http://www.howtogeek.com/70659/how-to-give-your-computers-network-traffic-priority-with-dd-wrt/ How to Prioritize Your Network Traffic with DD-WRT] || www.howtogeek.com || 80% - 95% || 80% - 100% || sfq(128p) ||
 || [https://calomel.org/pf_hfsc.html Hierarchical Fair Service Curve (HFSC)] || calomel.org || 97% || - || 500p ||
 || [http://rtn66u.blogspot.jp/2013/02/traffic-manager-qos.html Traffic Manager - QOS] || rtn66u.blogspot.jp || 70% - 80% || 70% - 80% || - ||
+
+=== Source Code ===
+
+|| *Title* || *Website* || *Shaping* || *Policing* || *Buffer Size* || Notes ||
+|| [https://github.com/zcecc22/qos-nxt qos-nxt] || github.com || 80% || 80% || 500p || ||
+|| [http://www.robbrewer.me/projects/openwrt/ Rob Brewer's Firewall and QoS Scripts for OpenWRT] || www.robbrewer.me || 90% || - || 150 KB ||
+|| [http://www.dslreports.com/forum/r24894358-Tomato-A-script-for-QOS A script for QOS] || www.dslreports.com || - || - || sfq(128p) ||
+|| [http://www.dslreports.com/forum/r20708380-Dedicated-VOIP-bandwidth-WRT54-Script-Generator Dedicated VOIP bandwidth - WRT54 Script Generator] || www.dslreports.com || - || - || sfq(128p) ||
+|| [http://www.rooot.net/en/geek-stuff/openwrt/1-qos-openwrt.html QoS for OpenWrt] || www.rooot.net || - || - || 200 KB ||
+|| [http://www.linksysinfo.org/index.php?threads/an-interesting-qos-script-example.36542/ An Interesting QOS script example] || www.linksysinfo.org || 76% || 76% || 1000p ||
+|| [http://pastebin.com/cNQ2DxEN QoS script for DD-WRT from Alex Rice's blog] || pastbin.com || 85% - 90% || - || - ||
+|| [http://lartc.org/howto/lartc.cookbook.fullnat.intro.html 15.10. Example of a full nat solution with QoS] || lartc.org || 80% || - || - ||
+|| [http://www.docunext.com/blog/2006/08/qos-script-for-openwrt.html QOS Script for OpenWRT] || www.docunext.com || 81% || 95% || 10 KB ||
