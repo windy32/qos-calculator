@@ -33,3 +33,8 @@
 || [http://www.myopenrouter.com/forum/thread/31357/QoS-is-not-functioning-correctly./ QoS is not functioning correctly.] || www.myopenrouter.com || - || 80% || - || ||
 || [http://www.phoneservicesupport.com/mj-actiontec-router-qos-t12036.html MJ & Actiontec Router QOS ] || www.phoneservicesupport.com || 80% || 80% || - || Yes ||
 || [http://community.linksys.com/t5/Wireless-Routers/Request-suggestion-to-improve-WISP-Ooma-VOIP-call-quality-using/td-p/534448 Request suggestion to improve WISP Ooma VOIP call quality using a Linksys WRT54G v5?] || community.linksys.com || 80% || - || - || ||
+|| [http://mybroadband.co.za/vb/showthread.php/545501-Skype-and-QOS  Skype and QOS] || mybroadband.co.za || 80% || 80% || sfq(128p) || Yes ||
+|| [http://www.rage3d.com/board/showthread.php?t=33873855 QoS work for any of you?] || www.rage3d.com || 80% || - || - || ||
+|| [http://forums.overclockers.com.au/showthread.php?t=441200 Engin VOIP + Billion 7402 + Help me setup QoS so my calls arn't choppy.] || forums.overclockers.com.au || 80% || 80% || - || Yes ||
+|| [http://forums.na.leagueoflegends.com/board/showthread.php?t=97116 
+Slight lag when running QoS/ Tomato/DD-WRT!] || forums.na.leagueoflegends.com || 80% || 80% || - || Yes ||
