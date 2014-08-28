@@ -1,0 +1,13 @@
+#summary Evidence of the 80 / 90 percent principle
+
+= Introduction =
+
+|| *Algorithm*              || *Preprocess (seconds)* || *Render (seconds)* ||
+|| Linear                   || 0.000                  || 70.939             ||
+|| Regular grid (400x400x5) || 0.055                  || 0.197              ||
+|| Flat grid (400x400x400)  || 0.892                  || 0.276              ||
+|| K-d tree                 || 0.701                  || 0.256              ||
+|| K-d tree (SAH)           || 7.075                  || 0.139              ||
+|| Convex                   || 0.672                  || 0.061              ||
+
+<font color="#0068b7">*Table I: The table in the paper*</font>
