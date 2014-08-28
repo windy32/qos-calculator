@@ -21,4 +21,4 @@
 || [http://ask.slashdot.org/story/08/06/26/2156201/can-any-router-guarantee-bandwidth-for-voip Can Any Router Guarantee Bandwidth For VoIP?] || ask.slashdot.org || 75% - 90% || - || - || ||
 || [http://tech.slashdot.org/story/08/06/01/2225228/why-bittorrent-causes-latency-and-how-to-fix-it Why BitTorrent Causes Latency and How To Fix It] || tech.slashdot.org || - || - || sfq(128p) || ||
 || [http://www.dslreports.com/forum/r19838037-Does-setting-QoS-to-80-of-bandwidth-limit-maximum-speed- Does setting QoS to 80% of bandwidth limit maximum speed?] || www.dslreports.com || 80% || - || - || ||
-|| [http://www.dslreports.com/forum/r26109676-Asterisk-QoS-question-with-SpeedBoost-on-Rogers `[`Asterisk`]` QoS question with SpeedBoost on Rogers] || www.dslreports.com || 80% || 80% || - || ||
+|| <a href="http://www.dslreports.com/forum/r26109676-Asterisk-QoS-question-with-SpeedBoost-on-Rogers">[Asterisk] QoS question with SpeedBoost on Rogers]</a> || www.dslreports.com || 80% || 80% || - || ||
