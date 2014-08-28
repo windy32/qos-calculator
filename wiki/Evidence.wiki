@@ -14,5 +14,4 @@
 === Forum Posts ===
 
 || *Title* || *Website* || *Shaping* || *Policing* || *Buffer Size* || *In Reply* ||
-|| [http://www.dd-wrt.com/phpBB2/viewtopic.php?t=3100
- My "custom" QoS that really works] || www.dd-wrt.com || 85% || 85% || 200p, 700p, 1000p || ||
+|| [http://www.dd-wrt.com/phpBB2/viewtopic.php?t=3100 My "custom" QoS that really works] || www.dd-wrt.com || 85% || 85% || 200p, 700p, 1000p || ||
