@@ -50,3 +50,13 @@
 || [http://www.spinics.net/lists/lartc/msg13594.html HTB mpu and overhead settings for PPPoE ADSL?] || www.spinics.net || 80% || - || - || ||
 || [http://mailman.ds9a.nl/pipermail/lartc/2004q4/014257.html SEPARATING VOIP AND SURFING] || mailman.ds9a.nl || 80% || - || - || ||
 || [https://forum.openwrt.org/viewtopic.php?id=4112 A qos script that really works!] || forum.openwrt.org || 93% || 89% || 1s || ||
+
+=== Wiki Pages ===
+
+|| *Title* || *Website* || *Shaping* || *Policing* || *Buffer Size* ||
+|| [http://www.dd-wrt.com/wiki/index.php/QoS Quality of Service] || www.dd-wrt.com || 80% - 95% || 80% - 95% || sfq(128p) ||
+|| [http://www.dd-wrt.com/wiki/index.php/Peer-to-Peer_%28P2P%29_Throttling Peer-to-Peer (P2P) Throttling] || www.dd-wrt.com || 80% - 95% || - || - ||
+|| [http://tomatousb.org/tut:using-tomato-s-qos-system Using Tomato's QOS System] || tomatousb.org || 85% || 66% - 80% || sfq(128p) ||
+|| [http://www.voipmechanic.com/setting-qos-voip-linksys.htm Configure QoS for VoIP on your router for better voice quality] || www.voipmachanic.com || 90% || - || - ||
+|| [http://vonage.nmhoy.net/qos.html Implementing QoS] || vonage.nmhoy.net || 90% - 95 || - || - ||
+|| [http://www.wi-fiplanet.com/tutorials/article.php/3800416 How to: Manage Traffic Using Tomato and QoS] || www.wi-fiplanet.com || 90% || - || max(49ms, 6.25 KB) ||
