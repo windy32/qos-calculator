@@ -27,3 +27,6 @@
 || [http://lifehacker.com/5710804/improve-your-bandwidth-heavy-activities-with-router-tweaks Improve Your Bandwidth-Heavy Activities with Router Tweaks] || lifehacker.com || 90% - 95% || - || - || Yes ||
 || [https://www.gargoyle-router.com/phpbb/viewtopic.php?f=5&t=2049 QOS just for p2p downloads/streaming?] || www.gargoyle-router.com || 90% || above 75% || - || Yes ||
 || [http://forums.smallnetbuilder.com/showthread.php?t=7809 Guide for QoS?] || forums.smallnetbuilder.com || 70% || - || - || ||
+|| [http://www.actuarialoutpost.com/actuarial_discussion_forum/archive/index.php/t-241559.html Voip and QOS] || www.actuarialoutpost.com || 80% - 90% || 80% - 90% || - || Yes ||
+|| [http://forums.dlink.com/index.php?action=printpage;topic=46039.0 Properly setup QOS engine] || forums.dlink.com || 80% || - || - || ||
+|| [http://www.ulop.net/forum/4-lounge/558495-qos-settings-for-wireless-router-adp-wizard-intex qos settings for Wireless Router/Adp WIZARD INTEX] || www.ulop.net || 80% || 80% || - || Yes ||
