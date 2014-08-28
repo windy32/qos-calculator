@@ -4,7 +4,7 @@
 
 = Open-source Firmwares and Script Generators =
 
-|| *Target* || *Date* || *Shaping* || Policing || Buffer Size || Path ||
+|| *Target* || *Date* || *Shaping* || *Policing* || *Buffer Size* || *Path* ||
 || Tomato 1.28 || June 28, 2010 || - || - || max(49ms, 6.25 KB) || /src/router/rc/qos.c ||
 || DD-WRT HTB rev 20939 || March 15, 2013 || - || - || sfq(128p) / codel(1000p) / fq_codel(10240p) || /src/router/iproute2/svqos.htb ||
 || DD-WRT HFSC rev 20939 || March 15, 2013 || - || - || sfq(128p) / codel(1000p) / fq_codel(10240p) || /src/router/iproute2/svqos.hfsc ||
