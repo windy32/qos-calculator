@@ -1,13 +1,12 @@
 #summary Evidence of the 80 / 90 percent principle
 
-= Introduction =
+<font color="#0068b7">*Claiming that the 80% / 90% principle is widely used, and that the correct sizing of the buffers of token buckets is not performed by most users without proof is not good. As a result, we collected a lot of evidence and related discussions on the Internet.*</font>
 
-|| *Algorithm*              || *Preprocess (seconds)* || *Render (seconds)* ||
-|| Linear                   || 0.000                  || 70.939             ||
-|| Regular grid (400x400x5) || 0.055                  || 0.197              ||
-|| Flat grid (400x400x400)  || 0.892                  || 0.276              ||
-|| K-d tree                 || 0.701                  || 0.256              ||
-|| K-d tree (SAH)           || 7.075                  || 0.139              ||
-|| Convex                   || 0.672                  || 0.061              ||
+= Open-source Firmwares and Script Generators =
 
-<font color="#0068b7">*Table I: The table in the paper*</font>
+|| *Target* || *Date* || *Shaping* || Policing || Buffer Size || Path ||
+|| Tomato 1.28 || June 28, 2010 || - || - || max(49ms, 6.25 KB) || /src/router/rc/qos.c ||
+|| DD-WRT HTB rev 20939 || March 15, 2013 || - || - || sfq(128p) / codel(1000p) / fq_codel(10240p) || /src/router/iproute2/svqos.htb ||
+|| DD-WRT HFSC rev 20939 || March 15, 2013 || - || - || sfq(128p) / codel(1000p) / fq_codel(10240p) || /src/router/iproute2/svqos.hfsc ||
+|| OpenWRT 12.09 || April 25, 2013 || - || - || fq_codel(10240p) || /package/qos-scripts ||
+|| WRT54 Script 1.02 || 2007 || - || - || sfq(128p) / default(1000p) || - ||
