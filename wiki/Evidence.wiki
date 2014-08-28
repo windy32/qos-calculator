@@ -24,6 +24,6 @@
 || [http://www.dslreports.com/forum/r26109676-Asterisk-QoS-question-with-SpeedBoost-on-Rogers Asterisk: QoS question with SpeedBoost on Rogers] || www.dslreports.com || 80% || 80% || - || ||
 || [http://forums.whirlpool.net.au/archive/1746121 7800N QoS Rules] || forums.whirlpool.net.au || 80% || - || - || ||
 || [http://forums.anandtech.com/showthread.php?t=2342285 Any consumer router than can handle 100mbps+ with QoS on?] || forums.anandtech.com || - || 80% || - || ||
-|| [http://lifehacker.com/5710804/improve-your-bandwidth-heavy-activities-with-router-tweaks || Improve Your Bandwidth-Heavy Activities with Router Tweaks] || lifehacker.com || 90% - 95% || - || - || Yes ||
+|| [http://lifehacker.com/5710804/improve-your-bandwidth-heavy-activities-with-router-tweaks Improve Your Bandwidth-Heavy Activities with Router Tweaks] || lifehacker.com || 90% - 95% || - || - || Yes ||
 || [https://www.gargoyle-router.com/phpbb/viewtopic.php?f=5&t=2049 QOS just for p2p downloads/streaming?] || www.gargoyle-router.com || 90% || above 75% || - || Yes ||
 || [http://forums.smallnetbuilder.com/showthread.php?t=7809 Guide for QoS?] || forums.smallnetbuilder.com || 70% || - || - || ||
