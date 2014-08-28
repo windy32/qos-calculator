@@ -22,3 +22,5 @@
 || [http://tech.slashdot.org/story/08/06/01/2225228/why-bittorrent-causes-latency-and-how-to-fix-it Why BitTorrent Causes Latency and How To Fix It] || tech.slashdot.org || - || - || sfq(128p) || ||
 || [http://www.dslreports.com/forum/r19838037-Does-setting-QoS-to-80-of-bandwidth-limit-maximum-speed- Does setting QoS to 80% of bandwidth limit maximum speed?] || www.dslreports.com || 80% || - || - || ||
 || [http://www.dslreports.com/forum/r26109676-Asterisk-QoS-question-with-SpeedBoost-on-Rogers Asterisk: QoS question with SpeedBoost on Rogers] || www.dslreports.com || 80% || 80% || - || ||
+|| [http://forums.whirlpool.net.au/archive/1746121 7800N QoS Rules] || forums.whirlpool.net.au || 80% || - || - || ||
+|| [http://forums.anandtech.com/showthread.php?t=2342285 Any consumer router than can handle 100mbps+ with QoS on?] || forums.anandtech.com || - || 80% || - || ||
