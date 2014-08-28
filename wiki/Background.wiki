@@ -1,0 +1,279 @@
+#Background Background information of this project.
+
+=== Background Information ===
+
+<font color="#0068b7">
+*Note: This part is not so related to the calculator application itself. However, it might be of interest for you if you have trouble configuring QoS for your home router.*
+</font>
+
+It all begins when I was an undergraduate at Nanjing University of Aeronautics and Astronautics. At that time my roommates and me decided to purchase the Internet service based on ADSL with a downstream rate of 2 Mbps and an upstream rate of 256 Kbps at a cost of 180 RMB (about 26.5 USD) per month. The link rate is rather low, however at that time it was the only acceptable choice.
+
+As I was the network administrator of our dormitory, it became the start of the battle. 
+
+A good feature of a DSL link is that when there's little traffic, the round trip time (ping value) to local websites (e.g., www.baidu.com in China) is expected to be low and stable. When there're some bulk data transfers, however, the delay may be easily raised to serveral hundred milliseconds to one second. As the link rate is rather low, this phenomenon may happen frequently when a single TCP transfer starts, which is not likely to happen in backbone links.
+
+It was really annoying when there were complaints about the network all day, so I started searching for the solution. The "QoS" page in home routers' web configuration interface seemed to be a good start point. Meanwhile, the QoS features in a lot of open source Linux router firmwares seemed to be attractive.
+
+I started to try different wireless routers, and then flash different open source firmwares. In that period I tested a list of routers including
+
+  * TP-Link WR541G+
+  * TP-Link WR741N
+  * D-Link DIR-600 B2
+  * Netgear WGR614 v6
+  * Netcore NW618
+
+And also a list of open source firmwares including
+
+  * DD-WRT
+  * Tamato (Original, RAF Mod, Speed Mod, DualWAN Mod)
+  * OpenWRT
+  * WayOS
+
+However, I faild to get an satisfying solution. The earlier version of TP-Link's home routers has a QoS page like this.
+
+<img src="http://qos-calculator.googlecode.com/svn/trunk/web/tp-link.png">
+
+It was also suggested that only the "maximum bandwidth" mode works effectively, and users should avoid using the "minimum bandwidth" mode. In later versions, this suggestion was removed. However none of the users know what's happened to the system.
+
+The earlier version of ASUS' home routers has an "EzQoS" system, in which different traffic is classified by ports and assigned to different priority levels. However, as no detailed explanation about what a "priority level" actually is, the function of the system is rather vague.
+
+<img src="http://qos-calculator.googlecode.com/svn/trunk/web/asus.png">
+
+I spent plenty of time trying different open source firmwares and different QoS configurations. The advantage of the open source firmwares is that they have much more features, more flexibiliy, more discussions and everything is open. The tomato firmware by Jonathan Zarate is one of the most popular.
+
+<img src="http://qos-calculator.googlecode.com/svn/trunk/web/tomato-1.png">
+<img src="http://qos-calculator.googlecode.com/svn/trunk/web/tomato-2.png">
+
+The QoS page in Tamato is presented above. There're much more features than most factory firmwares, isn't it?
+
+  * Classification by ip address, protocol and port
+  * Classification by number of bytes transferred
+  * Classification by the IPP2P module and the Layer-7 filter
+  * Prioritization for special packets (for example, ACK, SYN)
+  * TCP Vegas
+
+As a result, Tomato became my working system for the longest period of time, which works although not perfectly. The most important parameter of the QoS system, max bandwidth, is selected according to the well known 80 / 90 percent principle, which will be discussed later.
+
+Most users just configure QoS through the Web interface, thus rich features in the web interface has become significantly important for most users. However still there're a few users who decided to dig into the system for even better flexibility and performance. Most the work are based on Shell scripts. On the [http://bbs.dualwan.cn/ Tomato DualWAN Mod forum] (Chinese), there're plenty of scripts shared by different users.
+
+For example, one of the scripts originally writtern by zhoutao0712 and then modified by cmt1978 is like this (available at http://bbs.dualwan.cn/viewthread.php?tid=110802 (in Chinese)):
+
+<code language="Bash">
+#copyright by zhoutao0712
+UIP="192.168.1."
+NET="192.168.1.0/24"
+IPS="2"
+IPE="254"
+UP=35
+DOWN=400
+UPLOADR=3
+UPLOADC=8
+DOWNLOADR=20
+DOWNLOADC=$(($DOWN*9/10))
+
+ modprobe imq
+modprobe ipt_IMQ
+modprobe ipt_web
+modprobe ipt_length
+modprobe ipt_hashlimit
+modprobe xt_IMQ
+modprobe xt_length
+modprobe xt_hashlimit
+ifconfig imq1 up
+ifconfig imq0 up
+iptables -t mangle -N QOSDOWN
+iptables -t mangle -N QOSUP
+iptables -t mangle -A PREROUTING -s $NET -d ! $NET -p ! icmp -j QOSUP
+iptables -t mangle -I POSTROUTING -d $NET -s ! $NET -p ! icmp -j QOSDOWN
+iptables -t mangle -A OUTPUT -o br0 -j ACCEPT
+iptables -t mangle -A INPUT -i br0 -j ACCEPT
+iptables -t mangle -A OUTPUT -j QOSUP
+iptables -t mangle -A INPUT -j QOSDOWN
+iptables -t mangle -A QOSDOWN -j IMQ --todev 0
+iptables -t mangle -A QOSUP -j IMQ --todev 1
+
+ iptables -t mangle -A FORWARD -p icmp -j RETURN
+iptables -t mangle -A QOSUP -p tcp --syn -m connlimit --connlimit-above 100 -j RETURN
+iptables -t mangle -A QOSUP -m state --state NEW -p ! tcp -m connlimit --connlimit-above 200 -j DROP
+iptables -t mangle -N GAME_BURST
+iptables -t mangle -A QOSDOWN -m length --length 256: -j GAME_BURST
+iptables -t mangle -A GAME_BURST -m hashlimit --hashlimit 10/sec --hashlimit-burst 100 --hashlimit-mode dstip --hashlimit-name game_burst -j RETURN
+iptables -t mangle -A GAME_BURST -m recent --rdest --name game_burst --set -j RETURN
+iptables -t mangle -A QOSDOWN -m recent --rdest --name game_burst ! --rcheck  --seconds 5 -j MARK --set-mark-return 253
+iptables -t mangle -A QOSUP -p tcp -m mport --dports 80,443 -j BCOUNT
+iptables -t mangle -A QOSUP -p tcp -m mport --dports 80,443 -m bcount --range :102400 -j MARK --set-mark-return 255
+iptables -t mangle -N CONNLMT
+iptables -t mangle -I QOSUP -m state --state NEW -s $NET -j CONNLMT
+iptables -t mangle -I CONNLMT -p tcp -m web --path ".jpg .htm .gif .swf .html .xml .asp .js .css" -j RETURN
+iptables -t mangle -I CONNLMT -p udp -m mport --sports 53,67,68 -j RETURN
+iptables -t mangle -I CONNLMT -p udp -m mport --dports 53,67,68,7000,8000:8005  -j RETURN
+iptables -t mangle -I CONNLMT -p tcp -m mport --dports 25,80,110,443 -j RETURN
+iptables -t mangle -A QOSDOWN -j MARK --ipaddr 1
+iptables -t mangle -A QOSUP -j MARK --ipaddr 0
+
+ tc qdisc del dev imq0 root
+tc qdisc del dev imq1 root
+tc qdisc add dev imq0 root handle 1: htb
+tc qdisc add dev imq1 root handle 1: htb
+tc class add dev imq1 parent 1: classid 1:1 htb rate $((UP))kbps
+tc class add dev imq0 parent 1: classid 1:1 htb rate $((DOWN))kbps
+
+ tc class add dev imq1 parent 1:1 classid 1:254 htb rate $((UP))kbps quantum 12000 prio 0
+tc class add dev imq1 parent 1:1 classid 1:255 htb rate $((UP/5))kbps ceil $((UP/2))kbps quantum 2000 prio 3
+tc filter add dev imq1 parent 1:0 protocol ip prio 5 handle 255 fw flowid 1:255
+tc filter add dev imq1 parent 1:0 protocol ip prio 4 handle 254 fw flowid 1:254
+tc class add dev imq0 parent 1:1 classid 1:254 htb rate $((DOWN))kbps quantum 12000 prio 0
+tc class add dev imq0 parent 1:1 classid 1:255 htb rate $((DOWN*20/100))kbps ceil $((DOWN*80/100))kbps prio 3
+tc filter add dev imq0 parent 1:0 protocol ip prio 5 handle 255 fw flowid 1:255
+tc filter add dev imq0 parent 1:0 protocol ip prio 4 handle 254 fw flowid 1:254
+tc class add dev imq0 parent 1:1 classid 1:253 htb rate $((DOWN/2))kbps quantum 5000 prio 1
+tc filter add dev imq0 parent 1:0 protocol ip prio 5 handle 253 fw flowid 1:253
+
+ i=$IPS; 
+while [ $i -le $IPE ] 
+do
+   tc class add dev imq1 parent 1:1 classid 1:$i htb rate $((UPLOADR))kbps ceil $((UPLOADC))kbps quantum 1000 prio 5
+   tc qdisc add dev imq1 parent 1:$i handle $i: sfq perturb 15
+   tc filter add dev imq1 parent 1:0 protocol ip prio 6 handle $i fw classid 1:$i 
+   tc class add dev imq0 parent 1:1 classid 1:$i htb rate $((DOWNLOADR))kbps ceil $((DOWNLOADC))kbps quantum 1000 prio 5
+   tc qdisc add dev imq0 parent 1:$i handle $i: sfq perturb 15
+   tc filter add dev imq0 parent 1:0 protocol ip prio 6 handle $i fw classid 1:$i
+i=`expr $i + 1` 
+done
+
+ cat >/tmp/qos_scheduler <<"EOF"
+echo 1 >/tmp/state_scheduler
+if [ $(cat /proc/net/arp|fgrep -c 0x2) -le 2 ]
+then
+   ifconfig imq0 down
+   exit
+fi
+if [ $(ifconfig |grep -c imq0) -eq 0 ]
+then
+   ifconfig imq0 up
+fi
+ip neigh flush dev $(nvram get lan_ifname)
+EOF
+chmod +x /tmp/qos_scheduler
+cru d qos_scheduler
+echo -e '*/1 * * * *  sh /tmp/qos_scheduler #qos_scheduler#' >>/tmp/var/spool/cron/crontabs/root</code>
+
+The script seems to be rather complex. And there're still a number of scripts which are even more complicated. Most the the scripts claim to be *Smart Qos Scripts*, which means that all you need to do is to enable it without having to tune the parameters.
+
+At that time there was also a firmware system known by many Chinese Linux players which claimed to support smart QoS, which is from a unfamous Chinese network device manufactory called WayOS. The firmware system is then also referred to as the wayos system. It is believed by many users that the system is based on Tamato, bacause its supported devices are exactly the same with the ones supported by Tomato. However, as the wayos system is not an open-source project, the only way to evaluate it is to have a try.
+
+As there were so many choices (e.g., factory firmwares, open-source firmwares with  a list of configurable settings, smart QoS scripts that does not need tuning), I became totally doubtful about all the options available. Clearly, trying them one by one is not an efficient solution. Then I decided to develop a *benchmark system* for the QoS performance for routers in home network environments.
+
+The basic idea of calculating scores is quite straightforward:
+
+  * Higher link utilization generally leads to higher scores
+  * If a flows of a realtime application suffer from high latency and jitter, the score would be lower
+  * If the allocation of available bandwidth is unfair (e.g., the rate of bulk data transfers of user A is 10 times higher than that of user B just because A has used 10 threads for his download task but B used only one), the score would be lower
+
+A score related to traffic rate is relatively easy calculate, but for realtime applications it would be a bit difficult. As a result, we may just provide an interface for creating the function curve and then let users to decide which function to use.
+
+For realtime applications that cares only about the latency, the interface may look like this:
+
+<img src="http://qos-calculator.googlecode.com/svn/trunk/web/rt-1.png">
+
+And for applications that are concerned about both the latency and packet loss, it may look like this:
+
+<img src="http://qos-calculator.googlecode.com/svn/trunk/web/rt-2.png">
+
+In the left image of the latter, the x axis is the latency in milliseconds, and the y axis is the packet loss rate in 1%. The max score is 1.0, and minimum 0.0.
+
+In my imagination, the final system would be a benchmark system with data management functionality. The report generated may looks like this (the scores below are imaginary):
+
+<table cellpadding="5" cellspacing="0" border="1">
+<tr>
+   <th rowspan="2">Router Model</th>
+   <th rowspan="2">Firmware</th>
+   <th rowspan="2">Bandwidth</th>
+   <th rowspan="2">QoS Scheme</th>
+   <th rowspan="2">Parameters</th>
+   <th colspan="4">Score</th>
+   <th rowspan="2">Notes</th>
+</tr>
+<tr>
+   <th>Throughput</th>
+   <th>Delay Control</th>
+   <th>Fairness</th>
+   <th>Details</th>
+</tr>
+<tr>
+   <td>D-Link DIR-600 B2</td>
+   <td>Factory Default (2.01)</td>
+   <td>2 Mbps / 256 Kbps</td>
+   <td>None</td>
+   <td>-</td>
+   <td>0.97</td>
+   <td>0.32</td>
+   <td>0.27</td>
+   <td>...</td>
+   <td></td>
+</tr>
+<tr>
+   <td>D-Link DIR-600 B2</td>
+   <td>DD-WRT (rev. 14896)</td>
+   <td>2 Mbps / 256 Kbps</td>
+   <td>WAN / HTB</td>
+   <td>1700 / 240</td>
+   <td>0.89</td>
+   <td>0.77</td>
+   <td>0.69</td>
+   <td>...</td>
+   <td></td>
+</tr>
+<tr>
+   <td>Netcore NW618</td>
+   <td>WayOS BCM (2.1.115)</td>
+   <td>2 Mbps / 256 Kbps</td>
+   <td>Automatic</td>
+   <td>-</td>
+   <td>0.95</td>
+   <td>0.82</td>
+   <td>0.77</td>
+   <td>...</td>
+   <td></td>
+</tr>
+<tr>
+   <td>Netgear WGR614 v6</td>
+   <td>Tomato DualWAN 1.28.0542</td>
+   <td>2 Mbps / 256 Kbps</td>
+   <td>QoS Script v4</td>
+   <td>...</td>
+   <td>0.85</td>
+   <td>0.66</td>
+   <td>0.71</td>
+   <td>...</td>
+   <td></td>
+</tr></table>
+
+Well, the blueprint may sound good. However, after develop for months, I realized that I have lumped too many features together into a single system. So it is not likely to be finished in a reasonable period of time. 
+
+The features in the first blueprint include:
+
+  * Traffic generation and measurements
+  * Visualized scenario edit (i.e., at what time which user starts an applicaiton)
+  * Visualized RND edit
+  * A benchmark system with GUI
+  * Automatic configuration of routers (via telnet, ssh, etc. Of course it works only for open source firmwares)
+  * Management for experiment records
+
+As all the operations are integrated into a single graphics user interface, the complexity of the entire system exploded and I was unable to fix it.
+
+This is the begin of the algts project (https://code.google.com/p/algts).
+
+When realized that the initial task is impossible, I decided to remove all of the source code related to GUI. The benchmark system has also been removed. As a result, algts became a script driven traffic generator with some utilities (e.g., traffic measurement, trace generation, telnet / ssh operations). It still works, but it's not the system that I've imagined any longer. The major problem now is that why is it necessary develop such a system when there're so many open source traffic generators available. 
+
+Well the initial blueprint is nice, but the result was unexpected. I just ignored the questions and went on. 
+
+Although the algts project has been rather different from the initial blueprint, it's not bad either. The major advantage is that the experiments can be automatic. Under Windows when you use IxChariot as the traffic generator, it's impossible and you have to click on menus and buttons every few minites. Under Linux where other script driven traffic generators are available, the good news is that you don't have to learn about Bash scripts and how to send data to a telnet / ssh console in a script. Such hacking may be simple or difficult, but under algts, there's totally nothing to worry. Evevything is prepared and easy to use, ready for automation.
+
+I used algts to study the downstream QoS problem. Simulation experiments are under ns-2, the algts is responsible for real experiments. As a result, you can find a "ns2" folder under "utils" in algts' svn repositoty, in which there are a few ns-2 scripts and logs.
+
+As the reviews suggested, it is not really necessary to include the real experiments if the results are similar. Although the algts platform has been in company with me for a long time, I have to admit that it's true: there's actually no need to mention the algts platform.
+
+Some of the ns-2 scripts from the algts repository are moved here for further improvements. This project is intended to be the final work of the studies related to downstream QoS. It's a calculator used to decide token bucket parameters. To make it more useful, it can also generate scripts like the "WRT54G Script Generator".
+
+This is the end of the story. Maybe it will continue, so let's see.
