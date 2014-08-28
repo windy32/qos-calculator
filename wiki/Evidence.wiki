@@ -40,3 +40,6 @@
 || [http://tomato.groov.pl/?page_id=334&bugerator_nav=display&bug_project=1&issue=256 QOS Speed Limits] || tomato.groov.pl || 80% || 80% || max(49ms, 6.25 KB) || Yes ||
 || [http://forums.stevehoffman.tv/threads/sharing-an-internet-connection-evenly-via-a-linksys-router.203605/ Sharing an Internet Connection Evenly Via a Linksys Router] || forums.stevehoffman.tv || 80% || - || - || Yes ||
 || [http://hardforum.com/showthread.php?t=1454426 Should I use QoS on my home router? Is it worth it?] || hardforum.com || 80% - 90% || 80% - 90% || max(49ms, 6.25 KB) || ||
+|| [http://www.vonage-forum.com/Here_are_the_QoS_settings_I_use_on_my_Actiontec_with_VZ_FiOS_Go_to_the_QoS_tab_Select-post-98631.html Here are the QoS settings I use on my Actiontec with VZ FiOS. Go to the QoS tab. Select] || www.vonage-forum.com || 80% || 80% || - || ||
+|| [http://serverfault.com/questions/105014/does-anyone-really-understand-how-hfsc-scheduling-in-linux-bsd-works Does anyone really understand how HFSC scheduling in Linux/BSD works?] || serverfault.com || 70% - 80% || 70% - 80% || - || Yes ||
+|| [http://pbxinaflash.com/community/index.php?threads/best-way-to-go-about-qos-router-settings.8732/ Best way to go about QOS router settings?] || pbxinaflash.com || 80% - 90% || 80% - 90% || - || Yes ||
