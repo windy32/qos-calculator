@@ -10,3 +10,9 @@
 || DD-WRT HFSC rev 20939 || March 15, 2013 || - || - || sfq(128p) / codel(1000p) / fq_codel(10240p) || /src/router/iproute2/svqos.hfsc ||
 || OpenWRT 12.09 || April 25, 2013 || - || - || fq_codel(10240p) || /package/qos-scripts ||
 || WRT54 Script 1.02 || 2007 || - || - || sfq(128p) / default(1000p) || - ||
+
+=== Forum Posts ===
+
+|| *Title* || *Website* || *Shaping* || *Policing* || *Buffer Size* || *In Reply* ||
+|| [http://www.dd-wrt.com/phpBB2/viewtopic.php?t=3100
+ My "custom" QoS that really works] || www.dd-wrt.com || 85% || 85% || 200p, 700p, 1000p || ||
