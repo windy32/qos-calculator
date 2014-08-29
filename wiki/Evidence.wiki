@@ -4,7 +4,7 @@
 
 There seem to be no formal studies about this topic, thus most discussions are from forums, blogs, and wiki pages of related products and open-source projects.
 
-In the tables below, "shaping" stands for the token bucket rate for outgoing (tx) traffic, and "policing" for incoming (rx) traffic. Some of the discussions include both traffic shaping and policing paramters; some scripts have introduced more complex strategies setting the token rate, and can not be represented by a single percentage.
+In the tables below, "shaping" stands for the token bucket rate for outgoing (tx) traffic, and "policing" for incoming (rx) traffic. Some of the discussions include both traffic shaping and policing paramters; some scripts have introduced more complex strategies setting the token rate, and they can not be represented by a single percentage.
 
 We can find that most of the suggested percantage is between 80% and 90%.
 
