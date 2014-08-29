@@ -9,7 +9,7 @@
 || DD-WRT HTB rev 20939 || March 15, 2013 || - || - || sfq (128p) / codel (1000p) / fq_codel (10240p) || /src/router/iproute2/svqos.htb ||
 || DD-WRT HFSC rev 20939 || March 15, 2013 || - || - || sfq (128p) / codel (1000p) / fq_codel (10240p) || /src/router/iproute2/svqos.hfsc ||
 || OpenWRT 12.09 || April 25, 2013 || - || - || fq_codel (10240p) || /package/qos-scripts ||
-|| WRT54 Script 1.02 || 2007 || - || - || sfq (128p) / default(1000p) || - ||
+|| WRT54 Script 1.02 || 2007 || - || - || sfq (128p) / default (1000p) || - ||
 
 === Forum Posts ===
 
