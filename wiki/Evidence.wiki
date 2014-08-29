@@ -10,7 +10,7 @@ We can find that most of the suggested percantage is between 80% and 90%.
 
 In a lot of discussions, it is suggested to attach an sfq to an htb leaf, which lead to a buffer of exactly 128 packets. But why should the buffer size be 128 packets? It is quite arbitrary and seems to be too large in most circumstances.
 
-When there're a number of htb leaves, each of which attached with an sfq, then the total size of the buffer is 128 * n packets. Such a large buffer 
+When there're a number of htb leaves, each of which attached with an sfq, then the total size of the buffer is 128 `*` n packets. Such a large buffer 
 
 
 === Open-source Firmwares and Script Generators ===
