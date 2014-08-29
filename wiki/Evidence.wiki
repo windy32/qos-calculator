@@ -81,7 +81,7 @@
 
 === Source Code ===
 
-|| *Title* || *Website* || *Shaping* || *Policing* || *Buffer Size* || Notes ||
+|| *Title* || *Website* || *Shaping* || *Policing* || *Buffer Size* || *Notes* ||
 || [https://github.com/zcecc22/qos-nxt qos-nxt] || github.com || 80% || 80% || 500p || ||
 || [http://www.robbrewer.me/projects/openwrt/ Rob Brewer's Firewall and QoS Scripts for OpenWRT] || www.robbrewer.me || 90% || - || 150 KB || ||
 || [http://www.dslreports.com/forum/r24894358-Tomato-A-script-for-QOS A script for QOS] || www.dslreports.com || - || - || sfq(128p) || ||
@@ -97,3 +97,9 @@
 || [http://bbs.dualwan.cn/viewthread.php?tid=148372 技术研究 QOS：周大师V4.0和cmt1978 等脚本的综合修改试用版0.1] || bbs.dualwan.cn || - || - || sfq(128p) || (in Chinese) ||
 || [http://bbs.dualwan.cn/viewthread.php?tid=22482 P2P惩罚 QOS脚本 V4.0] || bbs.dualwan.cn || - || - || sfq(128p) || (in Chinese) ||
 || [http://bbs.dualwan.cn/viewthread.php?tid=120012 双wan极速飞驰版QOS脚本，v0.5] || bbs.dualwan.cn || - || - || sfq(128p) || (in Chinese) ||
+|| [http://bbs.dualwan.cn/viewthread.php?tid=20752 智能QOS脚本修改版] || bbs.dualwan.cn || - || - || sfq(128p) || (in Chinese) ||
+|| [http://bbs.dualwan.cn/viewthread.php?tid=12192 小包优先+WEB优先+IP限速+连接数限制 的脚本] || bbs.dualwan.cn || - || - || sfq(128p) || (in Chinese) ||
+|| [http://bbs.dualwan.cn/viewthread.php?tid=158102 儿童节发布K26支持任意网段限速QOS脚本，打得openwrt满地找牙] || bbs.dualwan.cn || - || - || sfq(128p) || (in Chinese) ||
+|| [http://bbs.dualwan.cn/viewthread.php?tid=152972 发布K26 QOS脚本，打压openwrt势力] || bbs.dualwan.cn || - || - || sfq(128p) || (in Chinese) ||
+|| [http://bbs.dualwan.cn/viewthread.php?tid=188892 ADSL QOS脚本 V1.1] || bbs.dualwan.cn || - || - || sfq(128p) || (in Chinese) ||
+|| [http://bbs.dualwan.cn/viewthread.php?tid=14442 小包优先+web优先+游戏爆发+单IP限速+连接数限制 QOS脚本V2.0] || bbs.dualwan.cn || 78% || 88% || sfq(128p) || (in Chinese) ||
