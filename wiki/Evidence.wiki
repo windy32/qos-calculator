@@ -103,3 +103,8 @@
 || [http://bbs.dualwan.cn/viewthread.php?tid=152972 发布K26 QOS脚本，打压openwrt势力] || bbs.dualwan.cn || - || - || sfq(128p) || (in Chinese) ||
 || [http://bbs.dualwan.cn/viewthread.php?tid=188892 ADSL QOS脚本 V1.1] || bbs.dualwan.cn || - || - || sfq(128p) || (in Chinese) ||
 || [http://bbs.dualwan.cn/viewthread.php?tid=14442 小包优先+web优先+游戏爆发+单IP限速+连接数限制 QOS脚本V2.0] || bbs.dualwan.cn || 78% || 88% || sfq(128p) || (in Chinese) ||
+
+=== Online Documents ===
+
+|| *Title* || *Website* || *Shaping* || *Policing* || *Buffer Size* || *Page* ||
+|| [https://www.synety.com/support/kb/kb_file.php?id=00PG000000FBkQ7MAL Setting up a DrayTek 2830n for SYNETY VoIP QoS] || www.synety.com || 80% || 80% || - || 2 ||
