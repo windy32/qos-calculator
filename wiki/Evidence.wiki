@@ -14,7 +14,7 @@ We can find that most of the suggested percantage is between 80% and 90%, and su
   * 1000 packets
   * 10240 packets
   * max(49 ms, 6.25 KB)
-  * other (10 / 150 / 200 KB, 200/ 500 / 700 packets, 1 second
+  * other (10 / 150 / 200 KB, 200 / 500 / 700 packets, 1000 ms)
 
 === Open-source Firmwares and Script Generators ===
 
