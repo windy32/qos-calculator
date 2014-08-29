@@ -35,7 +35,9 @@ Most "geeks" simply use the features provided in the web interface of different 
 
 For example, in earlier version of DD-WRT, when the user enables downstream bandwidth limiting, and then added some priority classes (e.g., Premium, Express, Standard, or Bulk), an sfq is attached to each htb leaf class automatically. As each sfq has a buffer of 128 packets, the entire bufffer may be 512 packets or more.
 
-In the "WRT54 Script Generator" known by many Linux router players, it's possible
+In the "WRT54 Script Generator" known by many Linux router players, it's possible to create an htb leaf node for each user (identified by IP or MAC address). Users can either attach an sfq to each htb leaf, or just leave it alone. For a network with n users, the former choice leads to a total buffer of 128 `*` n packets, and for the latter, 1000 `*` n packets. Clearly, it does not make sense to configure so large a buffer. When different users start bulk transfers at the same time, the htb has to absorb too many packets before taking a drop, which leads to significant delay and jitter.
+
+The Tomato firmware police traffic in a much smarter way.
 
 === Forum Posts ===
 
