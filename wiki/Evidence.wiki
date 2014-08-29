@@ -23,7 +23,7 @@ We can find that most of the suggested percantage is between 80% and 90%, and su
 || DD-WRT HTB rev 20939 || March 15, 2013 || - || - || sfq (128p) / codel (1000p) / fq_codel (10240p) || /src/router/iproute2/svqos.htb ||
 || DD-WRT HFSC rev 20939 || March 15, 2013 || - || - || sfq (128p) / codel (1000p) / fq_codel (10240p) || /src/router/iproute2/svqos.hfsc ||
 || OpenWRT 12.09 || April 25, 2013 || - || - || fq_codel (10240p) || /package/qos-scripts ||
-|| WRT54 Script 1.02 || 2007 || - || - || sfq (128p) / default (1000p) || - ||
+|| WRT54 Script Generator 1.02 || 2007 || - || - || sfq (128p) / default (1000p) || - ||
 
 <font color="#0068b7">*This is the most important category.*</font>
 
@@ -31,7 +31,11 @@ When users want to optimize their home networks, most of them will find that the
 
 As a result, most of the discussions appear in a few technical blogs and forums that are not well known by most ordinary users.
 
-Most "geeks" simply use the features provided in the web interface of different firmwares. That's why we consider it most important.
+Most "geeks" simply use the features provided in the web interface of different firmwares. That's why we consider it most important. However, there seem to be a lot of inappropriate settings of the buffer size.
+
+For example, in earlier version of DD-WRT, when the user enables downstream bandwidth limiting, and then added some priority classes (e.g., Premium, Express, Standard, or Bulk), an sfq is attached to each htb leaf class automatically. As each sfq has a buffer of 128 packets, the entire bufffer may be 512 packets or more.
+
+In the "WRT54 Traffic Generator" known by many Linux router players, it's possible
 
 === Forum Posts ===
 
