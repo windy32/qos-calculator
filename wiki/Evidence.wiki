@@ -1,8 +1,10 @@
 #summary Evidence of the 80 / 90 percent principle
 
-<font color="#0068b7">*Claiming that the 80% / 90% principle is widely used, and that the correct sizing of the buffers of token buckets is not performed by most users without proof is not good. As a result, we collected a lot of evidence and related discussions on the Internet.
+<font color="#0068b7">*Claiming that the 80% / 90% principle is widely used, and that the correct sizing of the buffers of token buckets is not performed by most users without proof is not good. As a result, we collected a lot of evidence and related discussions on the Internet.*
 
-In the tables below, "shaping" stands for the token bucket rate for outgoing (tx) traffic, and "policing" for incoming (rx) traffic. Some of the discussions include both traffic shaping and policing paramters; some scripts have introduced more complex strategies setting the token rate, and therefore  can not be represented by a single percentage.*
+*In the tables below, "shaping" stands for the token bucket rate for outgoing (tx) traffic, and "policing" for incoming (rx) traffic. Some of the discussions include both traffic shaping and policing paramters; some scripts have introduced more complex strategies setting the token rate, and can not be represented by a single percentage.*
+
+*We can find that most*
 </font>
 
 === Open-source Firmwares and Script Generators ===
