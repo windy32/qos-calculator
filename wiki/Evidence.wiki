@@ -35,7 +35,7 @@ Most "geeks" simply use the features provided in the web interface of different 
 
 For example, in earlier version of DD-WRT, when the user enables downstream bandwidth limiting, and then added some priority classes (e.g., Premium, Express, Standard, or Bulk), an sfq is attached to each htb leaf class automatically. As each sfq has a buffer of 128 packets, the entire bufffer may be 512 packets or more.
 
-In the "WRT54 Traffic Generator" known by many Linux router players, it's possible
+In the "WRT54 Script Generator" known by many Linux router players, it's possible
 
 === Forum Posts ===
 
