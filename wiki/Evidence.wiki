@@ -19,7 +19,7 @@
 || [http://www.dd-wrt.com/phpBB2/viewtopic.php?p=174421 Vonage and QoS finally figured out!!] || www.dd-wrt.com || 80% || 90% || sfq (128p) || ||
 || [http://www.linksysinfo.org/index.php?threads/using-qos-tutorial-and-discussion.28349/ Using QOS - Tutorial and discussion] || www.linksysinfo.org || 85% || 66% - 80% || - || ||
 || [http://ask.slashdot.org/story/08/06/26/2156201/can-any-router-guarantee-bandwidth-for-voip Can Any Router Guarantee Bandwidth For VoIP?] || ask.slashdot.org || 75% - 90% || - || - || ||
-|| [http://tech.slashdot.org/story/08/06/01/2225228/why-bittorrent-causes-latency-and-how-to-fix-it Why BitTorrent Causes Latency and How To Fix It] || tech.slashdot.org || - || - || sfq (128p) || ||
+|| [http://tech.slashdot.org/story/08/06/01/2225228/why-bittorrent-causes-latency-and-how-to-fix-it Why BitTorrent Causes Latency and How To Fix It] || tech.slashdot.org || - || - || sfq (128p) / default (1000p) || Yes ||
 || [http://www.dslreports.com/forum/r19838037-Does-setting-QoS-to-80-of-bandwidth-limit-maximum-speed- Does setting QoS to 80% of bandwidth limit maximum speed?] || www.dslreports.com || 80% || - || - || ||
 || [http://www.dslreports.com/forum/r26109676-Asterisk-QoS-question-with-SpeedBoost-on-Rogers Asterisk: QoS question with SpeedBoost on Rogers] || www.dslreports.com || 80% || 80% || - || ||
 || [http://forums.whirlpool.net.au/archive/1746121 7800N QoS Rules] || forums.whirlpool.net.au || 80% || - || - || ||
@@ -87,12 +87,12 @@
 || [http://www.dslreports.com/forum/r24894358-Tomato-A-script-for-QOS A script for QOS] || www.dslreports.com || - || - || sfq (128p) || ||
 || [http://www.dslreports.com/forum/r20708380-Dedicated-VOIP-bandwidth-WRT54-Script-Generator Dedicated VOIP bandwidth - WRT54 Script Generator] || www.dslreports.com || - || - || sfq (128p) || ||
 || [http://www.rooot.net/en/geek-stuff/openwrt/1-qos-openwrt.html QoS for OpenWrt] || www.rooot.net || - || - || 200 KB || ||
-|| [http://www.linksysinfo.org/index.php?threads/an-interesting-qos-script-example.36542/ An Interesting QOS script example] || www.linksysinfo.org || 76% || 76% || 1000p || ||
+|| [http://www.linksysinfo.org/index.php?threads/an-interesting-qos-script-example.36542/ An Interesting QOS script example] || www.linksysinfo.org || 76% || 76% || default (1000p) || ||
 || [http://pastebin.com/cNQ2DxEN QoS script for DD-WRT from Alex Rice's blog] || pastbin.com || 85% - 90% || - || - || ||
 || [http://lartc.org/howto/lartc.cookbook.fullnat.intro.html 15.10. Example of a full nat solution with QoS] || lartc.org || 80% || - || - || ||
 || [http://www.docunext.com/blog/2006/08/qos-script-for-openwrt.html QOS Script for OpenWRT] || www.docunext.com || 81% || 95% || 10 KB || ||
 || [http://bbs.dualwan.cn/viewthread.php?tid=32202 发一个双wan的智能QOS脚本（2010年6月17日更新附单wan）] || bbs.dualwan.cn || - || 91% || sfq (128p) || (in Chinese) ||
-|| [http://bbs.dualwan.cn/viewthread.php?tid=20122 智能QOS脚本横空出世] || bbs.dualwan.cn || - || - || 1000p || (in Chinese, imq0 / class 1:255) ||
+|| [http://bbs.dualwan.cn/viewthread.php?tid=20122 智能QOS脚本横空出世] || bbs.dualwan.cn || - || - || default (1000p) || (in Chinese, imq0 / class 1:255) ||
 || [http://bbs.dualwan.cn/viewthread.php?tid=110802 对zhoutao0712 qosv2.0 脚本的增强 第四次更新] || bbs.dualwan.cn || - || - || sfq (128p) || (in Chinese) ||
 || [http://bbs.dualwan.cn/viewthread.php?tid=148372 技术研究 QOS：周大师V4.0和cmt1978 等脚本的综合修改试用版0.1] || bbs.dualwan.cn || - || - || sfq (128p) || (in Chinese) ||
 || [http://bbs.dualwan.cn/viewthread.php?tid=22482 P2P惩罚 QOS脚本 V4.0] || bbs.dualwan.cn || - || - || sfq (128p) || (in Chinese) ||
