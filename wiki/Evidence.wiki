@@ -8,7 +8,7 @@ In the tables below, "shaping" stands for the token bucket rate for outgoing (tx
 
 Some of the discussions include both traffic shaping and policing paramters; some scripts have introduced more complex strategies setting the token rate, and they can not be represented by a single percentage.
 
-We can find that most of the suggested percantage is between 80% and 90%, and suggested buffer sizes of the token bucket algorithm include:
+We can find that most of the suggested percentage is between 80% and 90%, and suggested buffer sizes of the token bucket algorithm include:
 
   * 128 packets
   * 1000 packets
