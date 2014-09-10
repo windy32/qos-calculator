@@ -1,0 +1,25 @@
+inbound.cvec
+   - This is the original connection vector file for a 100 Mbps link
+
+inbound-2min.cvec
+   - The first 2 minutes of inbound.cvec
+
+inbound-2min-100m.cvec
+   - Derived from inbound-5min.cvec, but the sizes of application data units
+     are scaled up (1.3883x) so that the average throughput is 100 Mbps
+
+../inbound.cvec
+   - Same as inbound-2min-100m.cvec
+
+../inbound-1m-0.30.cvec
+../inbound-1m-0.40.cvec
+../...
+../inbound-1m-2.00.cvec
+../inbound-2m-0.30.cvec
+../inbound-2m-0.40.cvec
+../...
+../inbound-100m-0.30.cvec
+../...
+   - Derived from ../inbound.cvec, but the average throughput is decreased,
+     and then the sizes of application data units are scaled up / down
+
