@@ -48,7 +48,7 @@ http://kb.netgear.com/app/answers/detail/a_id/24266/~/how-to-enable-quality-of-s
 
 In this page, we can only find options about tx traffic control (traffic shaping). For tx traffic, we have full control over the packets, and we can configure priority queues and fair queues to improve quality of service, which is relatively easy.
 
-For rx traffic, we don't have direct control over the traffic, but traffic control is still possible. We believe that the negative options will disappear as related research and real-world testing continues.
+For rx traffic, we don't have direct control over the traffic, but traffic control is still possible. We believe that the negative options will disappear as related research and real-world testings continue.
 
 === Open-source Firmwares and Script Generators ===
 
