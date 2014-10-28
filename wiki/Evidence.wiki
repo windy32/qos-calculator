@@ -40,7 +40,15 @@ However, in some of the related discussions, we have also found different approa
 
 token_rate = bandwidth `*` (30 + online_hosts) / (20 + online_hosts `*` 8)
 
-The basic idea is that when there are more online hosts, the traffic load is heavier, so the token rate is lower.
+The basic idea is that when there are more online hosts, the traffic load is heavier, so the token rate is lower. However, in the calculator application, the token bucket parameters only depend on the link bandwidth. Traffic load is not considered (actually it has been taken into consideration) and the equation has only one dependency.
+
+We also noticed that a lot of users and router manufactures are against downstream traffic. An example is in the support page of Netgear routers:
+
+http://kb.netgear.com/app/answers/detail/a_id/24266/~/how-to-enable-quality-of-service-%28qos%29-on-routers-with-the-genie-user-interface
+
+In this page, we can only find options about tx traffic control (traffic shaping). For tx traffic, we have full control over the packets, and we can configure priority queues and fair queues to improve quality of service, which is relatively easy.
+
+For rx traffic, we don't have direct control over the traffic, but traffic control is still possible. We believe that the negative options will disappear as related research and real-world testing continues.
 
 === Open-source Firmwares and Script Generators ===
 
