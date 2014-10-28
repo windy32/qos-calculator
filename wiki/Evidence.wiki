@@ -16,6 +16,22 @@ We can find that most of the suggested percentage is between 80% and 90%, and su
   * max(49 ms, 6.25 KB)
   * other (10 / 150 / 200 KB, 200 / 500 / 700 packets, 1000 ms)
 
+=== Methodology for Collecting the Data ===
+
+A lot of discussions come from the forums of 3rd-party open source projects like DD-WRT, OpenWRT, and Tomato. We first use the internal search function in these forums to locate the posts with keywords like:
+
+  * QoS
+  * Quality of Service
+  * Bandwidth Control
+  * Speed Limit
+  * HTB
+  * VoIP
+  * BitTorrent
+
+Then we did the same for discussions out of these forums with Google. The first 20 pages contain a lot of related discussions, but it then becomes quite difficult to find a related topic.
+
+The search result from Google is not stable. As a result, the list may become quite different several years later. However, for such *anecdotal* evidence, it's the only way we can think of.
+
 === Open-source Firmwares and Script Generators ===
 
 || *Target* || *Date* || *Shaping* || *Policing* || *Buffer Size* || *Path* ||
