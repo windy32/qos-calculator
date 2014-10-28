@@ -32,6 +32,14 @@ Then we did the same for discussions out of these forums with Google. The first 
 
 The search result from Google is not stable. As a result, the list may become quite different several years later. However, for such *anecdotal* evidence, it's the only way we can think of.
 
+=== Different Approaches ===
+
+In the calculator application, we can see that the token bucket parameters depend only on the link bandwidth. This strategy is based on numerous simulation experiments based on ns-2 that we have performed.
+
+However, in some of the related discussions, we have also found different approaches. For example, in http://bbs.dualwan.cn/viewthread.php?tid=20122, it is suggested that:
+
+token_rate = bandwidth * (30 + online_hosts) / (20 + online_hosts * 8)
+
 === Open-source Firmwares and Script Generators ===
 
 || *Target* || *Date* || *Shaping* || *Policing* || *Buffer Size* || *Path* ||
