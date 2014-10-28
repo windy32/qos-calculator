@@ -40,7 +40,7 @@ However, in some of the related discussions, we have also found different approa
 
 token_rate = bandwidth `*` (30 + online_hosts) / (20 + online_hosts `*` 8)
 
-The basic idea is that when there are more online hosts, the traffic load is heavier, so the token rate is lower. However, in the calculator application, the token bucket parameters only depend on the link bandwidth. Traffic load is not considered (actually it has been taken into consideration) and the equation has only one dependency.
+We cannot find support for this equation. It seems to be arbitrary. However, the basic idea is easy to understand: when there are more online hosts, the traffic load is heavier, so the token rate is lower. However, in the calculator application, the token bucket parameters only depend on the link bandwidth. Traffic load is not considered (actually it has been taken into consideration) and the equation has only one dependency.
 
 We also noticed that a lot of users and router manufactures are against downstream traffic. An example is in the support page of Netgear routers:
 
