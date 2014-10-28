@@ -38,7 +38,9 @@ In the calculator application, we can see that the token bucket parameters depen
 
 However, in some of the related discussions, we have also found different approaches. For example, in http://bbs.dualwan.cn/viewthread.php?tid=20122, it is suggested that:
 
-token_rate = bandwidth * (30 + online_hosts) / (20 + online_hosts * 8)
+token_rate = bandwidth \* (30 + online_hosts) / (20 + online_hosts \* 8)
+
+The basic idea is that when there are more online hosts, the traffic load is heavier, so the token rate is lower.
 
 === Open-source Firmwares and Script Generators ===
 
