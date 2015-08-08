@@ -46,5 +46,5 @@ You can use this lookup table if you don't want to compile from source. Note tha
 
 You may be interested in:
 
-  * Background information of this project
-  * Evidence of 80% / 90% principle
+  * [Background information of this project](https://github.com/windy32/qos-calculator/wiki/Background-Information)
+  * [Evidence of 80% / 90% principle](https://github.com/windy32/qos-calculator/wiki/Evidence-of-the-80%25---90%25-Principle)
