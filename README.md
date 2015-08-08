@@ -9,7 +9,7 @@ There's binary compiled in Ubuntu 10.04 (32 bit) in the git repository. In other
 
 **Note: due to the use of Tmix traffic generator, cloning the entire repository may take a few minutes (about 100 MB). For those who just simply want to try the calculator, please git archive the /src directory.**
 
-##### Lookup Table #####
+### Lookup Table ###
 
 You can use this lookup table if you don't want to compile from source. Note that in Linux tc commands you should use kbit (kilobit per second) instead of kb (kilobytes per second).
 
@@ -42,7 +42,7 @@ You can use this lookup table if you don't want to compile from source. Note tha
 | 90 Mbps   | 86450 Kbps | 28200 Bytes |
 | 100 Mbps  | 96340 Kbps | 30810 Bytes |
 
-##### Wiki Pages #####
+### Wiki Pages ###
 
 You may be interested in:
 
